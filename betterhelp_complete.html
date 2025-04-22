@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BetterHelp Full Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f8f6;
+      scroll-behavior: smooth;
+    }
+
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+      color: #333;
+      background-color: #ffffff;
+      border-radius: 16px;
+      margin: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .therapy-options {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .option {
+      flex: 1 1 300px;
+      padding: 30px;
+      border-radius: 16px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      background-color: #f0fdfb;
+    }
+
+    .option:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .option img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .option::before {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 10px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .option:nth-child(1)::before {
+      background-image: url('https://cdn-icons-png.flaticon.com/512/2913/2913461.png');
+    }
+    .option:nth-child(2)::before {
+      background-image: url('https://cdn-icons-png.flaticon.com/512/2922/2922561.png');
+    }
+    .option:nth-child(3)::before {
+      background-image: url('https://cdn-icons-png.flaticon.com/512/2534/2534426.png');
+    }
+
+    .steps {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .step {
+      width: 240px;
+      background: #e7faf6;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .step:hover {
+      transform: translateY(-10px);
+    }
+
+    .step img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 15px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .btn {
+      background-color: #559288;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #3e6f66;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .accordion {
+      width: 80%;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .accordion-item {
+      background: #fff;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .accordion-header {
+      padding: 16px;
+      cursor: pointer;
+      font-weight: bold;
+      background: #f7fbfa;
+    }
+
+    .accordion-body {
+      padding: 16px;
+      display: none;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .accordion-item.active .accordion-body {
+      display: block;
+    }
+
+    .testimonial {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #e6f4f1;
+      border-left: 6px solid #559288;
+      border-radius: 10px;
+      font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      .therapy-options, .steps {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section class="section">
+  <h1 style="font-size: 2.8rem; color: #204e42;">You deserve to be happy.</h1>
+  <p style="font-size: 1.3rem; color: #444;">What type of therapy are you looking for?</p>
+  <div class="therapy-options">
+    <div class="option">
+      <img src="https://images.unsplash.com/photo-1612554824363-dc09a9895c5f?auto=format&fit=crop&w=600&q=80" alt="Individual Therapy">
+      <h3>Individual</h3>
+      <p>For myself ➜</p>
+    </div>
+    <div class="option">
+      <img src="https://images.unsplash.com/photo-1621440312765-20de43186e48?auto=format&fit=crop&w=600&q=80" alt="Couples Therapy">
+      <h3>Couples</h3>
+      <p>For me and my partner ➜</p>
+    </div>
+    <div class="option">
+      <h3>Teen</h3>
+      <p>For my child ➜</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>How BetterHelp Works</h2>
+  <div class="steps">
+    <div class="step">
+      <img src="https://cdn-icons-png.flaticon.com/512/3479/3479316.png" alt="Sign Up">
+      <h4>Sign Up</h4>
+      <p>Create your account to get started.</p>
+    </div>
+    <div class="step">
+      <img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" alt="Match">
+      <h4>Get Matched</h4>
+      <p>We'll find the right therapist for you.</p>
+    </div>
+    <div class="step">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Start Therapy">
+      <h4>Start Therapy</h4>
+      <p>Begin your journey to better mental health.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Why Choose BetterHelp?</h2>
+  <ul style="list-style: none; max-width: 800px; margin: 0 auto; padding: 0; text-align: left;">
+    <li style="margin-bottom: 20px; font-size: 1.1rem;">✔ Professional, licensed, and vetted therapists that you can trust</li>
+    <li style="margin-bottom: 20px; font-size: 1.1rem;">✔ Flexible communication: text, call, or video — your choice</li>
+    <li style="margin-bottom: 20px; font-size: 1.1rem;">✔ Affordable plans that fit your budget</li>
+    <li style="margin-bottom: 20px; font-size: 1.1rem;">✔ Private and secure therapy sessions anytime, anywhere</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial">“BetterHelp matched me with a therapist that truly understands me. It’s been life-changing!” – Sarah M.</div>
+  <div class="testimonial">“The flexibility to talk when I want has made therapy finally work for my schedule.” – James T.</div>
+  <div class="testimonial">“Affordable, compassionate, and professional. I wish I had signed up sooner.” – Alisha R.</div>
+</section>
+
+<section class="section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="accordion">
+    <div class="accordion-item">
+      <div class="accordion-header">What is BetterHelp?</div>
+      <div class="accordion-body">BetterHelp is an online platform that provides professional counseling services by licensed therapists.</div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">Is BetterHelp right for me?</div>
+      <div class="accordion-body">If you're looking for a convenient, affordable, and accessible option to receive therapy, BetterHelp might be a great choice for you.</div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">How much does it cost?</div>
+      <div class="accordion-body">The cost of therapy through BetterHelp varies based on your preferences, location, and therapist availability.</div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.parentElement;
+      item.classList.toggle('active');
+    });
+  });
+</script>
+
+</body>
+</html>
